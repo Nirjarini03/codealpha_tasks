@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Language Learning App</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+  <div class="container">
+    <h1>Language Learning App</h1>
+
+    <!-- Lesson Section -->
+    <section id="lessons">
+      <h2>Vocabulary Lesson</h2>
+      <div class="card">
+        <p><strong>Word:</strong> Hello</p>
+        <p><strong>Translation:</strong> Hola</p>
+        <button onclick="playAudio()">🔊 Hear Pronunciation</button>
+        <audio id="audio" src="assets/audio/hello.mp3"></audio>
+      </div>
+    </section>
+
+    <!-- Quiz Section -->
+    <section id="quiz">
+      <h2>Quick Quiz</h2>
+      <p>What is the Spanish word for "Hello"?</p>
+      <button onclick="checkAnswer(this, false)">Bonjour</button>
+      <button onclick="checkAnswer(this, true)">Hola</button>
+      <button onclick="checkAnswer(this, false)">Ciao</button>
+      <div id="result"></div>
+    </section>
+
+    <!-- Progress Section -->
+    <section id="progress">
+      <h2>Your Progress</h2>
+      <p>Lessons Completed: <span id="lessonsDone">1</span></p>
+      <p>Quiz Score: <span id="score">0</span></p>
+    </section>
+  </div>
+
+  <script src="script.js"></script>
+</body>
+</html>
